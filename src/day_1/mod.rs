@@ -1,6 +1,6 @@
 use std::io;
 
-fn main() {
+pub fn solution() {
     // Some already declared and initialized variables (Task's specific)
     let i : i32 = 5;
     let d : f32 = 2.5;
@@ -29,4 +29,3 @@ fn main() {
         println!("{}", e);
     }
 }
-

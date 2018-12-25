@@ -1,6 +1,6 @@
 use math::round;
 
-fn main() {
+pub fn solution() {
     // Some already declared and initialized variables (Task's specific)
     let meal_cost : f64 = 15.50;
     let tip_percent : i32 = 15;

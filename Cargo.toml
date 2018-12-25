@@ -1,5 +1,5 @@
 [package]
-name = "_2"
+name = "hr-30-days-of-rust"
 version = "0.1.0"
 authors = ["Nasko Vasilev <magiccrafter@gmail.com>"]
 edition = "2018"

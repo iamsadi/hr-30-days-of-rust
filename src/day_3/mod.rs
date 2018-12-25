@@ -1,4 +1,4 @@
-fn main() {
+pub fn solution() {
     // Some already declared and initialized variables (Task's specific)
     // Constraints: 1 <= n <= 100
     let n : i32 = 24;

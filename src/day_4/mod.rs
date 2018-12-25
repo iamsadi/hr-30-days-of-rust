@@ -27,7 +27,7 @@ impl Person {
     }
 }
 
-fn main() {
+pub fn solution() {
     let p1 = Person::of(1);
     let p2 = Person::of(13);
     let p3 = Person::of(18);

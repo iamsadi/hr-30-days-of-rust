@@ -1,6 +1,6 @@
 use std::io;
 
-fn main() {
+pub fn solution() {
     println!("Hello, World!");
 
     let mut input = String::new();

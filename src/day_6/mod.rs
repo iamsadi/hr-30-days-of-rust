@@ -1,4 +1,4 @@
-fn main() {
+pub fn solution() {
     let s = process("Hacker");
     println!("{}", s);
     assert_eq!(s, "Hce akr");

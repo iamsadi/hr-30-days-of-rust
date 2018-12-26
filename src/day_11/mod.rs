@@ -21,7 +21,7 @@ pub fn solution() {
         }
     }
 
-    let mut max = 0;
+    let mut max = -9 * 7;
     for i in 0..4 {
         for j in 0..4 {
             let tmp = array_2d[i][j] + array_2d[i][j+1] + array_2d[i][j+2] +

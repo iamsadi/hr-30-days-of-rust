@@ -22,10 +22,9 @@ pub fn solution() {
     }
 
     let mut max = 0;
-    let mut tmp = 0;
     for i in 0..4 {
         for j in 0..4 {
-            tmp = array_2d[i][j] + array_2d[i][j+1] + array_2d[i][j+2] +
+            let tmp = array_2d[i][j] + array_2d[i][j+1] + array_2d[i][j+2] +
                 array_2d[i+1][j+1] +
                 array_2d[i+2][j] + array_2d[i+2][j+1] + array_2d[i+2][j+2];
             if tmp > max {

@@ -2,7 +2,7 @@ use super::util;
 
 pub fn solution() {
     let expected_results = util::read_expected_results("7");
-    let (n, lines) = util::read_input_lines("7");
+    let (n, lines) = util::read_input_lines_with_n("7");
 
     let line = lines.get(0);
     let integers: Vec<i32> = line.unwrap()

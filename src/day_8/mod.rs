@@ -3,7 +3,7 @@ use std::collections::HashMap;
 
 pub fn solution() {
     let expected_results = util::read_expected_results("8");
-    let (n, lines) = util::read_input_lines("8");
+    let (n, lines) = util::read_input_lines_with_n("8");
 
     let mut results: Vec<String> = Vec::new(); // for validation purposes only
     let mut phone_book: HashMap<String, String> = HashMap::new();

@@ -2,7 +2,7 @@ use super::util;
 
 pub fn solution() {
     let expected_results = util::read_expected_results("10");
-    let (n, lines) = util::read_input_lines("10");
+    let (n, lines) = util::read_input_lines_with_n("10");
 
     let mut max: usize = 0;
     let mut tmp: usize = 0;

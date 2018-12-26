@@ -13,7 +13,7 @@ pub fn read_expected_results(day: &str) -> Vec<String> {
     return expected_results;
 }
 
-pub fn read_input_lines(day: &str) -> (usize, Vec<String>) {
+pub fn read_input_lines_with_n(day: &str) -> (usize, Vec<String>) {
     let tc_in_filename = format!("{}{}{}", "src/day_", day, "/tc.in");
     let tc_in_file = File::open(tc_in_filename).unwrap();
     let in_reader = BufReader::new(tc_in_file);
@@ -31,4 +31,19 @@ pub fn read_input_lines(day: &str) -> (usize, Vec<String>) {
     }
 
     return (n, lines);
+}
+
+pub fn read_input_lines(day: &str) -> Vec<String> {
+    let tc_in_filename = format!("{}{}{}", "src/day_", day, "/tc.in");
+    let tc_in_file = File::open(tc_in_filename).unwrap();
+    let in_reader = BufReader::new(tc_in_file);
+
+    let mut lines = Vec::new();
+
+    for line in in_reader.lines() {
+        let line = line.unwrap(); // Ignore errors.
+        lines.push(line);
+    }
+
+    return lines;
 }

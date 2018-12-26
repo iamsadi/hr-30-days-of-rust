@@ -8,7 +8,7 @@ pub fn solution() {
     const N: usize = 6; // columns
     const M: usize = 6; // rows
 
-    let mut array_6x6 = [[0 as i8; N]; M];
+    let mut array_2d = [[0 as i8; N]; M];
 
     for (i, line) in lines.iter().enumerate() {
         let numbers: Vec<i8> = line
@@ -17,7 +17,7 @@ pub fn solution() {
             .collect();
 
         for (j, n) in numbers.iter().enumerate() {
-            array_6x6[i][j] = *n;
+            array_2d[i][j] = *n;
         }
     }
 
@@ -25,9 +25,9 @@ pub fn solution() {
     let mut tmp = 0;
     for i in 0..4 {
         for j in 0..4 {
-            tmp = array_6x6[i][j] + array_6x6[i][j+1] + array_6x6[i][j+2] +
-                array_6x6[i+1][j+1] +
-                array_6x6[i+2][j] + array_6x6[i+2][j+1] + array_6x6[i+2][j+2];
+            tmp = array_2d[i][j] + array_2d[i][j+1] + array_2d[i][j+2] +
+                array_2d[i+1][j+1] +
+                array_2d[i+2][j] + array_2d[i+2][j+1] + array_2d[i+2][j+2];
             if tmp > max {
                 max = tmp;
             }

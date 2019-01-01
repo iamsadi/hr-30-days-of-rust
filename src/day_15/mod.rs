@@ -5,7 +5,7 @@ pub fn solution() {
     let (n, lines) = util::read_input_lines_with_n("15");
     let integers: Vec<isize> = lines.iter().map(|n| n.parse().unwrap()).collect();
 
-    let mut head: Option<Box<Node>> = None;
+    let mut head: Link = None;
     for int in integers {
         head = insert(head, int);
     }
@@ -14,7 +14,7 @@ pub fn solution() {
     assert_eq!(expected, result);
 }
 
-fn insert(mut head: Option<Box<Node>>, data: isize) -> Option<Box<Node>> {
+fn insert(mut head: Link, data: isize) -> Link {
     if head.is_none() {
         Some(Box::new(Node { data, next: None }))
     } else {
@@ -23,11 +23,11 @@ fn insert(mut head: Option<Box<Node>>, data: isize) -> Option<Box<Node>> {
     }
 }
 
-fn display(head: &Option<Box<Node>>) -> String {
+fn display(head: &Link) -> String {
     // for test purposes
     let mut res = "".to_string();
 
-    let mut start: &Option<Box<Node>> = head;
+    let mut start: &Link = head;
     while start.is_some() {
         let node = start.as_ref().unwrap();
         print!("{} ", node.data);
